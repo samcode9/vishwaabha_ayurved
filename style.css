@@ -87,10 +87,8 @@ nav a {
   display: flex;
   justify-content: left;
   text-align: left;
-<<<<<<< HEAD
   object-fit: contain;
-=======
->>>>>>> 251b3fc5c41476b2aa37c0998582fb9fc1b84e2e
+
 }
 
 .hero-content {
@@ -179,7 +177,6 @@ footer {
   padding: 20px;
   text-align: center;
 }
-<<<<<<< HEAD
 
 @media (max-width: 768px) {
   /* Body padding & layout */
@@ -271,5 +268,3 @@ footer {
     padding: 1rem;
   }
 }
-=======
->>>>>>> 251b3fc5c41476b2aa37c0998582fb9fc1b84e2e

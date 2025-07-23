@@ -248,7 +248,7 @@ footer {
     width: 160px;
   }
   /* Adjust hero/banner image */
-  .hero img, .banner img {
+  .hero img{
     width: 100%;
     height: auto;
     object-fit: cover;

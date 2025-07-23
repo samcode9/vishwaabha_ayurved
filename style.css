@@ -177,6 +177,9 @@ footer {
   padding: 20px;
   text-align: center;
 }
+.hamburger {
+  display: none;
+}
 
 @media (max-width: 768px) {
   /* Body padding & layout */
@@ -190,52 +193,74 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  /* Adjust nav menu */
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   nav {
-    display: none; /* hidden by default, shown via JS toggle */
-    width: 100%;
-    background-color: #333;
-  }
-
-  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: fit-content;
+    height: 100vh;
+    background-color: var(--cream);
     flex-direction: column;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 2rem;
+    box-shadow: 2px 0 8px var(--dark);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
   }
-
-  nav ul li {
-    width: 100%;
-    border-top: 1px solid #444;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    text-align: left;
-    color: white;
+  
+  nav ul {
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 5px;
   }
 
   nav.show {
-    display: block;
+    right: 0;
   }
 
-  /* Hamburger menu visible only on mobile */
   .hamburger {
     display: block;
+    align-items: center;
     font-size: 2rem;
     cursor: pointer;
-    color: white;
-    padding: 10px;
+    z-index: 1001; /* So it's above the nav */
+    position: absolute;
+    right: 1rem;
   }
+
+  .btn-primary {
+    margin-top: 10px;
+  }
+
+  /* Adjust nav menu */
+  nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #444;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: var(--dark);
+  }
+
 
   .hero{
     width: 100%;
     height: auto;
     object-fit: contain;
     color: var(--cream);
+  }
+  .hero-content{
+    padding: 40px;
   }
   .hero h1 {
     font-size: 28px;
@@ -246,7 +271,8 @@ footer {
   .hero-buttons{
     display: flex;
     flex-direction: column;
-    width: 160px;
+    text-align: center;
+    width: 150px;
   }
   /* Adjust hero/banner image */
   .hero img{

@@ -89,6 +89,7 @@ nav a {
   justify-content: left;
   text-align: left;
   background-size: cover;
+
 }
 
 .hero-content {
@@ -138,7 +139,7 @@ nav a {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));/*Dont know the explaination*/
   gap: 20px;
 }
 
@@ -281,6 +282,9 @@ footer {
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+  .about{
+    flex-direction: column-reverse;
   }
 
   /* Text sections */

@@ -40,9 +40,19 @@ header {
   font-weight: bold;
   font-family: var(--font-head);
   color: var(--green);
+  line-height: 1;
 }
 #logoimg{
     width: 80px;
+}
+.name{
+  display: flex;
+  flex-direction: column;
+}
+.name p{
+  color: var(--dark);
+  font-size: 14px;
+  margin-top: 2px;
 }
 nav{
     display: flex;
@@ -54,7 +64,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  
+  text-align: center;
+  line-height: 1.2;
 }
 
 nav a {

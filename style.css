@@ -57,6 +57,7 @@ header {
 nav{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -194,7 +195,7 @@ footer {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   /* Body padding & layout */
   body {
     padding: 0 10px;

@@ -87,14 +87,23 @@ nav ul li a:hover {
 }
 
 .btn-primary {
+  border: 2px solid var(--green);
   background: var(--green);
   color: white;
 }
+.btn-primary:hover {
+    background: #2a7944; 
+    color: var(--beige);
+}
 
 .btn-secondary {
+  background-color: var(--cream);
   border: 2px solid var(--green);
-  color: var(--green);
-  background: var(--cream);
+  color: var(--dark);
+}
+.btn-secondary:hover {
+    background: var(--green);
+    color: var(--beige); 
 }
 
 .hero {
@@ -258,6 +267,15 @@ footer {
   .btn-primary {
     margin-top: 10px;
   }
+  .btn-primary:hover {
+    background: #2a7944; 
+    color: var(--beige);
+}
+.btn-secondary:hover {
+    background: var(--green);
+    color: var(--beige); 
+}
+
 
   /* Adjust nav menu */
   nav ul li {

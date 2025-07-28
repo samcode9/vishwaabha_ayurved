@@ -67,12 +67,16 @@ nav ul {
   gap: 20px;
   text-align: center;
   line-height: 1.2;
+  transition: color 0.3s;
 }
 
 nav a {
   text-decoration: none;
   color: var(--dark);
   font-weight: 500;
+}
+nav ul li a:hover {
+  color: var(--green);
 }
 
 .btn-primary, .btn-secondary {
@@ -231,8 +235,11 @@ footer {
     margin-top: 50px;
     flex-direction: column;
     gap: 5px;
+    transition: color 0.3s;
   }
-
+  nav ul li a:hover {
+    color: var(--green);
+  }
   nav.show {
     right: 0;
     padding: 10px;

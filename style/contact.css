@@ -1,0 +1,68 @@
+.contact-section {
+  padding: 30px 15px;
+  background: #f9f9f9;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.addresses {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* allows wrapping for small screens */
+}
+
+.address-card {
+  background: #f8f1e7;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 250px; /* responsive cards */
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.address-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.address-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.address-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+/* Mobile view */
+@media (max-width: 768px) {
+  .addresses {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address-card {
+    max-width: 100%;
+  }
+}

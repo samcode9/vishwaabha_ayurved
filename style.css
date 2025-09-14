@@ -189,12 +189,14 @@ nav ul li a:hover {
 
 .card img {
   width: 100%;
-  height: 160px;
+  height: 180px;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 10px;
 }
-
+#panchkarma{
+  height: 250px;
+}
 .card:hover {
   transform: translateY(-5px);
 }
@@ -317,7 +319,9 @@ footer {
     background-size: cover;
     z-index: 1;
   }
-
+  #panchkarma{
+  height: 330px;
+}
   .section {
     padding: 1rem;
     text-align: center;

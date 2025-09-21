@@ -121,30 +121,77 @@ nav ul li a:hover {
   background: rgba(255,255,255,0.05); /* optional: slight overlay for readability */
 }
 /* ---------------- HERO ---------------- */
-.hero {
+/* ---------- HERO SLIDER ---------- */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 500px; /* same as original hero */
+  overflow: hidden;
+}
+
+/* Each slide */
+.hero-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: slideAnimation 6s infinite;
+}
+
+/* Slide delays for sequence */
+.hero-slider .slide:nth-child(1) { animation-delay: 0s; }
+.hero-slider .slide:nth-child(2) { animation-delay: 5s; }
+
+/* Slide images */
+.hero-slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  z-index: 1;
+}
+
+/* Slide 1: hero background */
+.hero-slider .slide-hero {
   background: url('/images/hero.jpg') no-repeat center center/cover;
   color: white;
-  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
-.hero-content {
+/* Hero content styling (reusing existing) */
+.hero-slider .hero-content {
   padding: 50px;
   border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
-.hero h1 {
+.hero-slider .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-family: var(--font-head);
 }
 
-.hero-buttons a {
+.hero-slider .hero-buttons a {
   margin: 10px;
 }
+
+/* Fade in/out animation for slides */
+@keyframes slideAnimation {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  45%  { opacity: 1; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 
 /* ---------------- ABOUT ---------------- */
 .about {
